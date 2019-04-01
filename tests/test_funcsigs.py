@@ -92,7 +92,7 @@ class TestFunctionSignatures(unittest.TestCase):
             ((('args', Ellipsis, Ellipsis, "var_positional"),), Ellipsis))
 
     def test_deepcopy(self):
-	def test(*args, **kwargs):
-	    pass
+        def test(*args, **kwargs):
+            pass
         sig = self.signature(test)
-	self.assertEqual(sig, copy.deepcopy(sig))
+        self.assertEqual(sig, copy.deepcopy(sig))
